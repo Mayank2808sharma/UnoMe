@@ -2,6 +2,19 @@
 import React, { useState, useEffect } from "react";
 import { Crown, Users, Zap, ArrowRight, Gamepad2 } from "lucide-react";
 
+const EthereumLogo = () => (
+  <svg width="20" height="20" viewBox="0 0 784.37 1277.39" className="text-white">
+    <g fill="currentColor">
+      <polygon fillOpacity=".6" points="392.07,0 383.5,29.11 383.5,873.74 392.07,882.29 784.13,650.54"/>
+      <polygon points="392.07,0 -0,650.54 392.07,882.29 392.07,472.33"/>
+      <polygon fillOpacity=".6" points="392.07,956.52 387.24,962.41 387.24,1263.28 392.07,1277.38 784.37,724.89"/>
+      <polygon points="392.07,1277.38 392.07,956.52 -0,724.89"/>
+      <polygon fillOpacity=".2" points="392.07,882.29 784.13,650.54 392.07,472.33"/>
+      <polygon fillOpacity=".6" points="0,650.54 392.07,882.29 392.07,472.33"/>
+    </g>
+  </svg>
+);
+
 export default function UnoShowdown() {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -19,20 +32,20 @@ export default function UnoShowdown() {
         }}
       />
 
-      {/* Minimalistic Overlay */}
-      <div className="absolute inset-0 bg-black/70" />
+      {/* Enhanced Overlay with subtle gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/60" />
 
       <div className="relative z-10 min-h-screen flex flex-col">
-        {/* Clean Header */}
+        {/* Enhanced Header */}
         <header className="p-8">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-6 h-6 bg-white rounded-sm flex items-center justify-center">
-                <div className="w-3 h-3 bg-black rounded-sm" />
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2">
+                <EthereumLogo />
+                <span className="text-white font-mono text-sm tracking-wider">
+                  ETHGLOBAL DELHI
+                </span>
               </div>
-              <span className="text-white font-mono text-sm tracking-wider">
-                ETHGLOBAL DELHI
-              </span>
             </div>
             <div className="text-white/60 text-sm font-mono">2025</div>
           </div>
@@ -41,44 +54,46 @@ export default function UnoShowdown() {
         {/* Main Content */}
         <div className="flex-1 flex items-center justify-center px-8">
           <div
-            className={`max-w-4xl w-full text-center transform transition-all duration-1000 ${
-              isLoaded ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+            className={`max-w-4xl w-full text-center transform transition-all duration-1200 ease-out ${
+              isLoaded ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
             }`}
           >
-            {/* Main Title */}
+            {/* Main Title with enhanced animation */}
             <div className="mb-16">
-              <div className="inline-flex items-center gap-2 mb-8 px-3 py-1 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm">
-                <div className="w-2 h-2 bg-white rounded-full" />
-                <span className="text-white/80 text-xs font-mono uppercase tracking-wider">
+              <div className="inline-flex items-center gap-3 mb-8 px-4 py-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-md">
+                <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
+                <span className="text-white/90 text-xs font-mono uppercase tracking-widest">
                   Ultimate Championship
                 </span>
               </div>
 
-              <h1 className="text-7xl md:text-9xl font-black mb-4 tracking-tighter leading-none text-white">
-                UNO
+              <h1 className="text-7xl md:text-9xl font-black mb-6 tracking-tighter leading-none text-white">
+                <span className="bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
+                  UNO
+                </span>
               </h1>
-              <div className="w-24 h-0.5 bg-white mx-auto mb-4" />
-              <h2 className="text-lg md:text-xl font-mono text-white/70 tracking-[0.3em] uppercase">
+              <div className="w-32 h-0.5 bg-gradient-to-r from-transparent via-white to-transparent mx-auto mb-6" />
+              <h2 className="text-lg md:text-xl font-mono text-white/80 tracking-[0.4em] uppercase">
                 Showdown
               </h2>
             </div>
 
-            {/* Challenge Message */}
-            <div className="mb-16 max-w-2xl mx-auto space-y-4">
-              <p className="text-lg text-white/80 font-light">
+            {/* Enhanced Challenge Message */}
+            <div className="mb-20 max-w-2xl mx-auto space-y-6">
+              <p className="text-lg text-white/80 font-light leading-relaxed">
                 Kartik & Pascal, you had your laughs.
               </p>
-              <p className="text-xl md:text-2xl font-medium text-white">
-                Time to face the real challenge.
+              <p className="text-xl md:text-2xl font-medium text-white leading-relaxed">
+                Time to face the <span className="text-white font-bold">real challenge</span>.
               </p>
             </div>
 
-            {/* Minimalistic Player Cards */}
-            <div className="flex justify-center items-center gap-8 mb-16">
+            {/* Enhanced Player Cards */}
+            <div className="flex justify-center items-center gap-12 mb-20">
               {/* Kartik */}
-              <div className="text-center">
-                <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 p-0.5 mb-3">
-                  <div className="w-full h-full rounded-full bg-black flex items-center justify-center overflow-hidden">
+              <div className="text-center group">
+                <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-sm border border-white/30 p-0.5 mb-4 group-hover:border-white/50 transition-all duration-300">
+                  <div className="w-full h-full rounded-full bg-gradient-to-br from-black/80 to-black flex items-center justify-center overflow-hidden">
                     <img
                       src="/kartik.jpg"
                       alt="Kartik"
@@ -88,20 +103,20 @@ export default function UnoShowdown() {
                         e.target.nextSibling.style.display = "flex";
                       }}
                     />
-                    <div className="w-full h-full bg-white/20 hidden items-center justify-center text-sm font-bold text-white rounded-full">
+                    <div className="w-full h-full bg-white/20 hidden items-center justify-center text-lg font-bold text-white rounded-full">
                       K
                     </div>
                   </div>
                 </div>
-                <div className="text-white text-sm font-mono">KARTIK</div>
+                <div className="text-white text-sm font-mono tracking-wider">KARTIK</div>
               </div>
 
-              <div className="text-white/40 text-sm font-mono mx-4">VS</div>
+              <div className="text-white/50 text-lg font-mono mx-6 animate-pulse">VS</div>
 
               {/* Pascal */}
-              <div className="text-center">
-                <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 p-0.5 mb-3">
-                  <div className="w-full h-full rounded-full bg-black flex items-center justify-center overflow-hidden">
+              <div className="text-center group">
+                <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-sm border border-white/30 p-0.5 mb-4 group-hover:border-white/50 transition-all duration-300">
+                  <div className="w-full h-full rounded-full bg-gradient-to-br from-black/80 to-black flex items-center justify-center overflow-hidden">
                     <img
                       src="/pascal.png"
                       alt="Pascal"
@@ -111,20 +126,20 @@ export default function UnoShowdown() {
                         e.target.nextSibling.style.display = "flex";
                       }}
                     />
-                    <div className="w-full h-full bg-white/20 hidden items-center justify-center text-sm font-bold text-white rounded-full">
+                    <div className="w-full h-full bg-white/20 hidden items-center justify-center text-lg font-bold text-white rounded-full">
                       P
                     </div>
                   </div>
                 </div>
-                <div className="text-white text-sm font-mono">PASCAL</div>
+                <div className="text-white text-sm font-mono tracking-wider">PASCAL</div>
               </div>
 
-              <div className="text-white/40 text-sm font-mono mx-4">VS</div>
+              <div className="text-white/50 text-lg font-mono mx-6 animate-pulse">VS</div>
 
               {/* Mayank */}
-              <div className="text-center">
-                <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 p-0.5 mb-3">
-                  <div className="w-full h-full rounded-full bg-black flex items-center justify-center overflow-hidden">
+              <div className="text-center group">
+                <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-sm border border-white/30 p-0.5 mb-4 group-hover:border-white/50 transition-all duration-300">
+                  <div className="w-full h-full rounded-full bg-gradient-to-br from-black/80 to-black flex items-center justify-center overflow-hidden">
                     <img
                       src="/mayank.jpeg"
                       alt="Mayank"
@@ -134,33 +149,36 @@ export default function UnoShowdown() {
                         e.target.nextSibling.style.display = "flex";
                       }}
                     />
-                    <div className="w-full h-full bg-white/20 hidden items-center justify-center text-sm font-bold text-white rounded-full">
+                    <div className="w-full h-full bg-white/20 hidden items-center justify-center text-lg font-bold text-white rounded-full">
                       M
                     </div>
                   </div>
                 </div>
-                <div className="text-white text-sm font-mono">MAYANK</div>
+                <div className="text-white text-sm font-mono tracking-wider">MAYANK</div>
               </div>
             </div>
 
-            {/* Clean CTA Button */}
+            {/* Enhanced CTA Button */}
             <div className="relative inline-block">
               <button 
                 onClick={() => window.open("https://discord.com/users/mayank2808sharma", "_blank")} 
-                className="group relative px-6 py-3 bg-white text-black font-mono text-sm uppercase tracking-wider hover:bg-white/90 transition-all duration-300 border border-white/20"
+                className="group relative px-8 py-4 bg-white text-black font-mono text-sm uppercase tracking-widest hover:bg-white/95 transition-all duration-300 border border-white/30 hover:border-white/50 backdrop-blur-sm"
               >
                 <div className="flex items-center gap-3">
+                  <Gamepad2 className="w-4 h-4" />
                   <span>Accept Challenge</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </div>
+                {/* Button glow effect */}
+                <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl" />
               </button>
             </div>
           </div>
         </div>
 
-        {/* Clean Footer */}
+        {/* Enhanced Footer */}
         <footer className="p-8 text-center">
-          <div className="text-white/40 text-xs font-mono uppercase tracking-wider">
+          <div className="text-white/50 text-xs font-mono uppercase tracking-wider">
             Ready to prove who's the real champion?
           </div>
         </footer>
