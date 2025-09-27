@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { Crown, Users, Zap, ArrowRight, Gamepad2 } from "lucide-react";
+import {ArrowRight, Gamepad2 } from "lucide-react";
 
 const EthereumLogo = () => (
   <svg width="20" height="20" viewBox="0 0 784.37 1277.39" className="text-white">
@@ -99,8 +99,11 @@ export default function UnoShowdown() {
                       alt="Kartik"
                       className="w-full h-full object-cover rounded-full"
                       onError={(e) => {
-                        e.target.style.display = "none";
-                        e.target.nextSibling.style.display = "flex";
+                        const img = e.target as HTMLImageElement;
+                        img.style.display = "none";
+                        if (img.nextSibling && img.nextSibling instanceof HTMLElement) {
+                          (img.nextSibling as HTMLElement).style.display = "flex";
+                        }
                       }}
                     />
                     <div className="w-full h-full bg-white/20 hidden items-center justify-center text-base sm:text-lg font-bold text-white rounded-full">
@@ -123,8 +126,11 @@ export default function UnoShowdown() {
                       alt="Pascal"
                       className="w-full h-full object-cover rounded-full"
                       onError={(e) => {
-                        e.target.style.display = "none";
-                        e.target.nextSibling.style.display = "flex";
+                        const img = e.target as HTMLImageElement;
+                        img.style.display = "none";
+                        if (img.nextSibling && img.nextSibling instanceof HTMLElement) {
+                          (img.nextSibling as HTMLElement).style.display = "flex";
+                        }
                       }}
                     />
                     <div className="w-full h-full bg-white/20 hidden items-center justify-center text-base sm:text-lg font-bold text-white rounded-full">
@@ -147,8 +153,11 @@ export default function UnoShowdown() {
                       alt="Mayank"
                       className="w-full h-full object-cover rounded-full"
                       onError={(e) => {
-                        e.target.style.display = "none";
-                        e.target.nextSibling.style.display = "flex";
+                        const img = e.target as HTMLImageElement;
+                        img.style.display = "none";
+                        if (img.nextSibling && img.nextSibling instanceof HTMLElement) {
+                          (img.nextSibling as HTMLElement).style.display = "flex";
+                        }
                       }}
                     />
                     <div className="w-full h-full bg-white/20 hidden items-center justify-center text-base sm:text-lg font-bold text-white rounded-full">
@@ -181,7 +190,7 @@ export default function UnoShowdown() {
         {/* Enhanced Footer */}
         <footer className="p-4 sm:p-6 lg:p-8 text-center">
           <div className="text-white/50 text-xs font-mono uppercase tracking-wider">
-            Ready to prove who's the real champion?
+            Ready to prove who is the real champion?
           </div>
         </footer>
       </div>
