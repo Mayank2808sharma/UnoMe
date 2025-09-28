@@ -167,6 +167,32 @@ export default function UnoShowdown() {
                 </div>
                 <div className="text-white text-xs sm:text-sm font-mono tracking-wider">MAYANK</div>
               </div>
+               <div className="text-white/50 text-sm sm:text-lg font-mono animate-pulse hidden sm:block">VS</div>
+              <div className="text-white/50 text-sm font-mono animate-pulse sm:hidden">VS</div>
+
+              {/*  */}
+              <div className="text-center group">
+                <div className="w-16 h-16 sm:w-18 sm:h-18 lg:w-20 lg:h-20 rounded-full bg-white/10 backdrop-blur-sm border border-white/30 p-0.5 mb-3 sm:mb-4 group-hover:border-white/50 transition-all duration-300 mx-auto">
+                  <div className="w-full h-full rounded-full bg-gradient-to-br from-black/80 to-black flex items-center justify-center overflow-hidden">
+                    <img
+                      src="/sabucha.png"
+                      alt="Sabucha"
+                      className="w-full h-full object-cover rounded-full"
+                      onError={(e) => {
+                        const img = e.target as HTMLImageElement;
+                        img.style.display = "none";
+                        if (img.nextSibling && img.nextSibling instanceof HTMLElement) {
+                          (img.nextSibling as HTMLElement).style.display = "flex";
+                        }
+                      }}
+                    />
+                    <div className="w-full h-full bg-white/20 hidden items-center justify-center text-base sm:text-lg font-bold text-white rounded-full">
+                      S
+                    </div>
+                  </div>
+                </div>
+                <div className="text-white text-xs sm:text-sm font-mono tracking-wider">Sabucha</div>
+              </div>
             </div>
 
             {/* Enhanced CTA Button */}
